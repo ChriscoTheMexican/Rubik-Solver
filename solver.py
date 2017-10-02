@@ -1,25 +1,21 @@
 import rubik
 import Queue
 
-
 def shortest_path(start, end):
-    checked = []
-    queue = Queue()
-    checked.append(start)
-    queue.enqueue(start)
 
+    moves = []
 
-    while not queue.empty:
-        current = queue.dequeue
-        if current.has(end):
-            return current
-          
-    
-    
-    
+    if(start == end):
+        return
 
+    nodes = [rubik.F, rubik.Fi,
+             rubik.L, rubik.Li,
+             rubik.U, rubik.Ui]
 
-    
+    for i in nodes:
+        if start + nodes[i] == end:
+            return
+
     """
     Using 2-way BFS, finds the shortest path from start_position to
     end_position. Returns a list of moves. 
@@ -29,6 +25,16 @@ def shortest_path(start, end):
     """
     raise NotImplementedError
 
+def bfs(root, goal):
+    checked = []
+    queue = Queue()
 
+    checked.append(root)
+    queue.enqueue(root)
 
-    
+    while not Queue.empty:
+        current = Queue.deque()
+        if current.has(goal):
+            return current
+
+    print "test"
