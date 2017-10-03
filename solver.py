@@ -30,8 +30,21 @@ def shortest_path(start, end):
             return moves
         #Two or more are needed
         else:
-            
-            
+            print "This is a test for testing purposes"
+
+            # get the 6 rotations from the start pos and the next 5 paths for each rotation
+
+            # get the 6 rotations from the end pos and the next 5 paths for each rotation
+
+            # check to see if the frontiers contain the same config
+
+            # if they do return
+
+            # otherwise build out 5 more configs from each path
+
+            # check again to see if there is a match
+
+            # repeat until a match is found
             
             
             
