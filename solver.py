@@ -21,7 +21,7 @@ def shortest_path(start, end):
 
         # more than two off
         else:
-            print "Test"
+            print "This is a test for testing purposes"
 
             # get the 6 rotations from the start pos and the next 5 paths for each rotation
 
