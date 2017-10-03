@@ -2,33 +2,36 @@ import rubik
 import Queue
 
 def shortest_path(start, end):
-    #return the amount of moves that need to be made
+    # return the amount of moves that need to be made
     moves = []
 
-    #outlines the possible turns from runbik.py 
+    # outlines the possible turns from runbik.py
     poss_turns = [rubik.F, rubik.Fi,
                  rubik.L, rubik.Li,
                  rubik.U, rubik.Ui]
 
-    #they are the same
+    # they are the same
     if(start == end):
-        #returns nothing becasue the first and second are the same
+        # returns nothing becasue the first and second are the same
         return moves
     
-    #The following loop is going to iterate through the nodes
-    #and determine how many moves need to be applied to moves[]
-    for i in range (0,len(nodes)):
+    # The following loop is going to iterate through the nodes
+    # and determine how many moves need to be applied to moves[]
+    for i in range (0,len(poss_turns)):
         path_one = rubik.perm_apply(poss_turns[i], start)
-        #only one turn is needed
+        # only one turn is needed
         if path_one == end:
-            #loop invarience:
-            #start[i] is equal to one turn of F, L, or U
-            #for all values that are equal to one turn
-            #Maintaince: the moves gets added to the list of moves
-            #Termination: the loop will return the list of required moves
+
+            # loop invarience:
+            # start[i] is equal to one turn of F, L, or U
+            # for all values that are equal to one turn
+            # Maintaince: the moves gets added to the list of moves
+            # Termination: the loop will return the list of required moves
+
             moves.append(poss_turns[i])
             return moves
-        #Two or more are needed
+
+        # Two or more are needed
         else:
             print "This is a test for testing purposes"
 
@@ -45,11 +48,6 @@ def shortest_path(start, end):
             # check again to see if there is a match
 
             # repeat until a match is found
-            
-            
-            
-            
-        
 
     """
     Using 2-way BFS, finds the shortest path from start_position to
