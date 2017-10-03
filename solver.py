@@ -5,7 +5,7 @@ def shortest_path(start, end):
 
     moves = []
     
-    nodes = [rubik.F, rubik.Fi,
+    poss_turns = [rubik.F, rubik.Fi,
              rubik.L, rubik.Li,
              rubik.U, rubik.Ui]
 
